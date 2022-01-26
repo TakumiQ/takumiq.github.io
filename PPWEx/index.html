@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>Pony Poky World Ex</title>
     <link rel="icon" href="Recursos/Cupcake.png" />
@@ -77,31 +78,20 @@
                 , 'url(Recursos/CloudySkyNight.png)'
             );
 
-            //var current = 0;
-
-            //function nextBackground() {
-            //    current++;
-            //    current = current % backgrounds.length;
-            //    header.css('background-image', backgrounds[current]);
-            //}
-            //setInterval(nextBackground, 1000);
-
-            var date = new Date;
-            date.setTime();
-
+            var date = new Date();
             var hour = date.getHours();
 
             function changeBackground() {
-                if (hour >= 9 && hour < 3)
+
+                if (hour >= 9 && hour < 15)
                     header.css('background-image', backgrounds[0])
-                else if (hour >= 3 && hour < 7)
+                else if (hour >= 15 && hour < 19)
                     header.css('background-image', backgrounds[1])
                 else
                     header.css('background-image', backgrounds[2])
             }
 
             changeBackground();
-
         });
 
     </script>
@@ -130,3 +120,4 @@
     <br />
 
 </body>
+</html>
