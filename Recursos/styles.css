@@ -107,6 +107,27 @@ p {
     display: table;
 }
 
+.btn-botoneraLinks {
+    margin-left: auto;
+    margin-right: auto;
+    width: 720px;
+    height: 70px;
+}
+
+.botonLinks {
+    box-sizing: border-box;
+    background-color: #00aeae;
+    border: 3px solid cyan;
+    height: 40px;
+    line-height: 34px;
+    color: white;
+    cursor: pointer;
+    float: left;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
 footer {
     margin-left: auto;
     margin-right: auto;
