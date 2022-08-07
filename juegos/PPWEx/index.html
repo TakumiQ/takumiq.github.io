@@ -2,11 +2,11 @@
 <html>
 <head>
     <title>Pony Poky World Ex</title>
-    <link rel="icon" href="Recursos/Cupcake.png" />
+    <link rel="icon" href="recursos/Cupcake.png" />
     <style>
         @font-face {
             font-family: Upheaval;
-            src: url('Recursos/UpheavalPro.otf');
+            src: url('recursos/UpheavalPro.otf');
         }
 
         p {
@@ -46,7 +46,7 @@
         .animatedcloud {
             position: fixed;
             font-weight: bold;
-            animation: cloudmove 24s infinite;
+            animation: cloudmove 20s infinite;
             z-index: -10;
         }
 
@@ -61,7 +61,7 @@
             }
 
             to {
-                left: 2150px;
+                left: 1400px;
             }
         }
     </style>
@@ -73,9 +73,9 @@
             var header = $('body');
 
             var backgrounds = new Array(
-                'url(Recursos/CloudySky.png)'
-                , 'url(Recursos/CloudySky.png)'
-                , 'url(Recursos/CloudySkyNight.png)'
+                'url(recursos/CloudySky.png)'
+                , 'url(recursos/CloudySky.png)'
+                , 'url(recursos/CloudySkyNight.png)'
             );
 
             var date = new Date();
@@ -99,23 +99,18 @@
 
 <body>
 
-    <header></header>
-
-    <div class="animatedcloud " id="linearcloud"> <img src="Recursos/Nube.png" /> </div>
+    <div class="animatedcloud " id="linearcloud"> <img src="recursos/Nube.png" /> </div>
+    <div class="animatedcloud " id="linearcloud" style="left: -250px; animation-delay: 9s; float:left; margin: 200px 0 0 0;"> <img src="recursos/Nube.png" /> </div>
+    <div class="animatedcloud " id="linearcloud" style="left: -250px; animation-delay: 14s; float:left; margin: 400px 0 0 0;"> <img src="recursos/Nube.png" /> </div>
+    <div class="animatedcloud " id="linearcloud" style="left: -250px; animation-delay: 5s; float:left; margin: 600px 0 0 0;"> <img src="recursos/Nube.png" /> </div>
 
     <p align="center">
         <img src="Recursos/PPWExLogo.png" />
     </p>
 
-    <div class="animatedcloud " id="linearcloud" style="left: -250px; animation-delay: 4s;"> <img src="Recursos/Nube.png" /> </div>
-
-    <br />
-
-    <p class="gamecontainer" align="center">
+    <p class="gamecontainer" align="center" >
         <iframe src="Game/index.html" width="480" height="360" title="Ejemplo"></iframe>
     </p>
-
-    <div class="animatedcloud " id="linearcloud" style="left: -250px; animation-delay: 7s;"> <img src="Recursos/Nube.png" /> </div>
 
     <br />
 

@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\juegos",
+    "\\juegos\\PPWEx",
+    "\\recursos\\cyansprites\\cyanjs"
   ],
-  "SelectedNode": "\\recursos",
+  "SelectedNode": "\\juegos\\PPWEx\\index.html",
   "PreviewInSolutionExplorer": false
 }
