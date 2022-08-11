@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "Upheaval";
+    src: url("UpheavalPro.otf");
+}
+
 body {
-    background: url(background.png) center top repeat-y #000000;
+    background: url(imagenes/otros/background.png) center top repeat-y #000000;
     color: #eeeeee;
     font-family: Arial, Helvetica, sans-serif;
     padding: 0;
@@ -17,21 +22,6 @@ h1 {
 p {
     font-size: 16px;
     word-wrap: break-word
-}
-
-@font-face {
-    font-family: "Upheaval";
-    src: url("UpheavalPro.otf");
-}
-
-.Title1 {
-    font-family: "Upheaval";
-    font-size: 28px;
-}
-
-.Title2 {
-    font-family: "Upheaval";
-    font-size: 24px;
 }
 
 .container {
@@ -59,10 +49,20 @@ p {
 }
 
 #logo {
-    height: 265px;
+    height: 204px;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    background-image: url(imagenes/logos/Logo.gif);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#subtitle {
+    font-family: "Upheaval";
+    font-size: 24px;
+    height: 61px;
     text-align: center;
 }
 
@@ -110,7 +110,7 @@ p {
 .btn-botoneraLinks {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: auto;
+    margin-bottom: -5px;
     width: 600px;
     height: 70px;
 }
@@ -127,6 +127,16 @@ p {
     border-radius: 8px;
     text-decoration: none;
     text-align: center;
+}
+
+.botonLinks:hover {
+    background-color: #0068ad;
+}
+
+.botonLinks:after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 footer {
