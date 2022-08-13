@@ -1,0 +1,13 @@
+{
+"companyName": "The Cyan Project",
+"productName": "Beam Master",
+"dataUrl": "Beam Master.data.unityweb",
+"asmCodeUrl": "Beam Master.asm.code.unityweb",
+"asmMemoryUrl": "Beam Master.asm.memory.unityweb",
+"asmFrameworkUrl": "Beam Master.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

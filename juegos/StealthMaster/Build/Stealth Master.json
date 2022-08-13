@@ -1,0 +1,13 @@
+{
+"companyName": "The Cyan Project",
+"productName": "Stealth Master",
+"dataUrl": "Stealth Master.data.unityweb",
+"asmCodeUrl": "Stealth Master.asm.code.unityweb",
+"asmMemoryUrl": "Stealth Master.asm.memory.unityweb",
+"asmFrameworkUrl": "Stealth Master.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

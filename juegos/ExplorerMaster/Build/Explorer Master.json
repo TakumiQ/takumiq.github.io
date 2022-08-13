@@ -1,0 +1,13 @@
+{
+"companyName": "The Cyan Project",
+"productName": "Explorer Master",
+"dataUrl": "Explorer Master.data.unityweb",
+"asmCodeUrl": "Explorer Master.asm.code.unityweb",
+"asmMemoryUrl": "Explorer Master.asm.memory.unityweb",
+"asmFrameworkUrl": "Explorer Master.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
