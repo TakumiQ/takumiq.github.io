@@ -24,6 +24,10 @@ p {
     word-wrap: break-word
 }
 
+a {
+    color:cyan;
+}
+
 .container {
     background-color: #000000;
     width: 720px;
