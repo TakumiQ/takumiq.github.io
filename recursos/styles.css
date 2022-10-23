@@ -25,7 +25,8 @@ p {
 }
 
 a {
-    color:cyan;
+    color: cyan;
+    text-decoration: none;
 }
 
 .container {
