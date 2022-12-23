@@ -1,0 +1,79 @@
+<!--takumiq.github.io/galeria/-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="/recursos/imagenes/favicon.png" />
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="/recursos/css/styles.css" media="all">
+    <title>Galeria | Takumi Q Domain</title>
+</head>
+
+<body>
+    <!-- Título -->
+    <div id="logo"></div>
+    <div id="subtitle">Sitio para propósitos personales</div>
+
+    <!-- Botonera -->
+    <div class="gen-btns">
+        <a href="/" class="gen-btn gen-btn-w17">Inicio</a>
+        <a href="/info" class="gen-btn gen-btn-w16">Acerca de</a>
+        <a href="/links" class="gen-btn gen-btn-w17">Links</a>
+        <a href="https://takumiq.blogspot.com" class="gen-btn gen-btn-w17">Blog</a>
+        <a href="/galeria" class="gen-btn gen-btn-w16">Galería</a>
+        <a href="/juegos" class="gen-btn gen-btn-w17">Juegos</a>
+    </div>
+
+    <!-- Contenido -->
+    <div class="gen-container gen-mb40">
+        <h1 align="center">Galería</h1>
+        <div align="center">
+            <audio controls id="galleryAudio" class="gen-mb20"><source src="https://vgmsite.com/soundtracks/super-smash-bros.-ultimate-vol.-29-super-smash-bros/mpjibmoemy/53.%20Trophy%20Gallery.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
+        </div>
+
+        <!-- Galería -->
+        <div class="gal-imgs-row gen-mb20">
+            <div class="gal-imgs-col">
+                <img src="img/Pommy HD.png" class="gal-img" alt="TSA Pommy HD" onclick="OpenModal(this)">
+                <img src="img/Mario Vs Clippy Remastered.png" class="gal-img" alt="Mario Vs Clippy Remastered" onclick="OpenModal(this)">
+                <img src="img/Throw test 1.png" class="gal-img" alt="Throw test screenshot 1" onclick="OpenModal(this)">
+            </div>
+            <div class="gal-imgs-col">
+                <img src="img/Spooky Icon.png" class="gal-img" alt="Spooky Icon" onclick="OpenModal(this)">
+                <img src="img/CAT-DOS Logo.png" class="gal-img" alt="CAT-DOS Logo" onclick="OpenModal(this)">
+                <img src="img/Storm King Logo Prime 4.png" class="gal-img" alt="Storm King Logo in Prime 4 style" onclick="OpenModal(this)">
+                <img src="img/Throw test 2.png" class="gal-img" alt="Throw test screenshot 2" onclick="OpenModal(this)">
+
+            </div>
+            <div class="gal-imgs-col">
+                <img src="img/CJ Art Renderer.png" class="gal-img" alt="CJ meets Art Renderer" onclick="OpenModal(this)">
+                <img src="img/Cyan.png" class="gal-img" alt="Cyan origins" onclick="OpenModal(this)">
+                <img src="img/Subspace 1.png" class="gal-img" alt="Subspace" onclick="OpenModal(this)">
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="galleryModal" class="gal-modal">
+            <!-- X -->
+            <span class="gal-modal-close" onclick="CloseModal()">&times;</span>
+
+            <!-- Imagen -->
+            <div class="gal-imgbox">
+                <img class="gal-modal-content" id="imgModal" />
+            </div>
+
+            <!-- Descripción -->
+            <div id="gal-caption"></div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="galeria.js"></script>
+    </div>
+
+    <footer>
+        <p>
+            Takumi Q Domain                         Contacto: <a href="mailto:takumi12338@gmail.com">takumi12338@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,330 @@
+/* ------- General entities ------- */
+
+@font-face {
+    font-family: "Upheaval";
+    src: url("UpheavalPro.otf");
+}
+
+#logo {
+    height: 204px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url(../imagenes/logos/Logo.gif);
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#subtitle {
+    font-family: "Upheaval";
+    font-size: 24px;
+    height: 61px;
+    text-align: center;
+}
+
+#main-header {
+    background: cyan;
+    color: white;
+    height: 50px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+
+body {
+    background: url(../imagenes/otros/background.png) center top repeat-y #000000;
+    color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    backface-visibility: hidden;
+}
+
+footer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding: 8px;
+    border-radius: 30px;
+    border-top: 3px solid cyan;
+    width: 740px;
+    color: white;
+}
+
+h1 {
+    font-family: "Upheaval";
+    font-size: 32px;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+p {
+    font-size: 16px;
+    word-wrap: break-word
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
+}
+
+/* ------- General ------- */
+
+.gen-container {
+    background-color: rgb(0 255 255 / 0.1);
+    width: 720px;
+    margin: auto;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: cyan;
+    border-inline: 1px;
+    padding: 16px;
+}
+
+.gen-mb20 {
+    margin-bottom: 20px;
+}
+
+.gen-mb30 {
+    margin-bottom: 30px;
+}
+
+.gen-mb40 {
+    margin-bottom: 40px;
+}
+
+.gen-header {
+    padding: 5px;
+    width: 60%;
+    margin: auto;
+    border-radius: 100px;
+    border-style: outset;
+    border-color: darkorange;
+    text-align: center;
+    background: cyan;
+    color: white;
+    font-size: 20px;
+}
+
+.gen-btns {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    width: 720px;
+    height: 40px;
+    
+}
+
+.gen-btn {
+    box-sizing: border-box;
+    background-color: #00aeae;
+    color: white;
+    border: 3px solid cyan;
+    border-radius: 16px;
+    height: 40px;
+    line-height: 34px;
+    cursor: pointer;
+    float: left;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+.gen-btn-w16 {
+    width: 16%;
+}
+
+.gen-btn-w17 {
+    width: 17%;
+}
+
+.gen-btn:hover {
+    background-color: #005e5e;
+}
+
+.gen-btn:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ------- Links ------- */
+
+.links-btns {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -5px;
+    width: 600px;
+    height: 70px;
+}
+
+.links-btn {
+    box-sizing: border-box;
+    background-color: #0088e2;
+    border: 3px solid #0044ff;
+    height: 60px;
+    line-height: 54px;
+    color: white;
+    cursor: pointer;
+    float: left;
+    border-radius: 16px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.links-btn:hover {
+    background-color: #0068ad;
+}
+
+.links-btn:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ------- Galeria ------- */
+
+.gal-img {
+    width: 100%;
+}
+
+.gal-imgs-col img {
+    margin-top: 8px;
+    vertical-align: middle;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gal-imgs-col img:hover {
+    opacity: 0.7;
+}
+
+.gal-imgs-row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+.gal-imgs-col {
+    -ms-flex: 50%;
+    flex: 50%;
+    padding: 0 4px;
+}
+
+/* Modal background */
+.gal-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    /*padding-top: 100px;  Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    /*overflow: auto; Enable scroll if needed */
+    background-color: rgba(0,0,0,0.9); /* Fade */
+}
+
+/* Modal Content (Image) */
+.gal-modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    margin: auto;
+    border: 2px solid red;
+    border-radius: 30px;
+    border-style: solid;
+    border-color: cyan;
+    border-inline: 1px;
+}
+
+.gal-imgbox {
+    display: grid;
+    height: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#gal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Modal close button */
+.gal-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.gal-modal-close:hover, .gal-modal-close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Add Animation - Fade in the Modal */
+.gal-modal, .gal-modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.4s;
+}
+
+@keyframes zoom {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ------- Juegos ------- */
+
+.games-table {
+    border-collapse: separate;
+    width: 100%;
+    margin-bottom: -20px;
+    border: 1px solid rgb(0 0 0 / 0.00);
+}
+
+.games-table td {
+    /*
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    */
+
+    border: 1px solid rgb(0 0 0 / 0.00);
+    vertical-align: baseline;
+    padding: 0px;
+    text-align: center;
+}
+
+div.gameTitle {
+    margin-top: 6px;
+    font-weight: bold;
+    text-align: center;
+}
+
+div.gameDesc {
+    margin-top: 6px;
+    margin-bottom: 32px;
+    text-align: left;
+}
