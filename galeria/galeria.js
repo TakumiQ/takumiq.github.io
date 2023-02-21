@@ -1,5 +1,7 @@
 var audio = document.getElementById("galleryAudio");
-audio.volume = 0.1;
+var secretAudio = document.getElementById("secretGalleryAudio");
+audio.volume = 0.2;
+secretAudio.volume = 0.4;
 
 FixImages();
 
@@ -46,3 +48,8 @@ document.onkeydown = function (evt) {
         CloseModal();
     }
 };
+
+function ShowSecretGallery() {
+    var secret = document.getElementById("secretGallery");
+    secret.style.display = "block";
+}

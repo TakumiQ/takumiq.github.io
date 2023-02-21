@@ -25,8 +25,8 @@
     </div>
 
     <!-- Contenido -->
-    <div class="gen-container gen-mb40">
-        <h1 align="center">Galería</h1>
+    <div class="gen-container gen-mb20">
+        <h1 align="center">Gale<b onclick="ShowSecretGallery()">r</b>ía</h1>
         <div align="center">
             <audio controls id="galleryAudio" class="gen-mb20"><source src="https://vgmsite.com/soundtracks/super-smash-bros.-ultimate-vol.-29-super-smash-bros/mpjibmoemy/53.%20Trophy%20Gallery.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
         </div>
@@ -51,24 +51,45 @@
                 <img src="img/Subspace 1.png" class="gal-img" alt="Subspace" onclick="OpenModal(this)">
             </div>
         </div>
+    </div>
 
-        <!-- Modal -->
-        <div id="galleryModal" class="gal-modal">
-            <!-- X -->
-            <span class="gal-modal-close" onclick="CloseModal()">&times;</span>
-
-            <!-- Imagen -->
-            <div class="gal-imgbox">
-                <img class="gal-modal-content" id="imgModal" />
-            </div>
-
-            <!-- Descripción -->
-            <div id="gal-caption"></div>
+    <!-- Secret gallery -->
+    <div id="secretGallery" class="gen-container gen-mb40" style="display: none;">
+        <h1 align="center">Secret gallery</h1>
+        <div align="center">
+            <audio controls id="secretGalleryAudio" class="gen-mb20"><source src="https://vgmsite.com/soundtracks/saturn-bomberman-1996-saturn-gamerip/udvriwcpei/03.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
         </div>
 
-        <!-- Scripts -->
-        <script src="galeria.js"></script>
+        <!-- Galería -->
+        <div class="gal-imgs-row gen-mb20">
+            <div class="gal-imgs-col">
+                <img src="secretGallery/Sonic US.png" class="gal-img" alt="Sonic CD US" onclick="OpenModal(this)" loading="lazy">
+            </div>
+            <div class="gal-imgs-col">
+                <img src="secretGallery/Canelita.gif" class="gal-img" alt="Canelita" onclick="OpenModal(this)" loading="lazy">
+            </div>
+            <div class="gal-imgs-col">
+                <img src="secretGallery/Generator Room Cortex.gif" class="gal-img" alt="Cortex" onclick="OpenModal(this)" loading="lazy">
+            </div>
+        </div>
     </div>
+
+    <!-- Modal -->
+    <div id="galleryModal" class="gal-modal">
+        <!-- X -->
+        <span class="gal-modal-close" onclick="CloseModal()">&times;</span>
+
+        <!-- Imagen -->
+        <div class="gal-imgbox">
+            <img class="gal-modal-content" id="imgModal" />
+        </div>
+
+        <!-- Descripción -->
+        <div id="gal-caption"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="galeria.js"></script>
 
     <footer>
         <p>
