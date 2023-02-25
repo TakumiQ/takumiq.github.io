@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://takumiq.github.io/recursos/imagenes/logos/Logo.png" />
+<img src="https://takumiq.github.io/recursos/img/logos/Logo.png" />
 <h1> Takumi Q Domain </h1>
 </div>
 
