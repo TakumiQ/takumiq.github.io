@@ -33,7 +33,7 @@ function CloseModal() {
     var modal = document.getElementById("galleryModal");
     modal.style.display = "none";
 
-    document.body.style.overflow = 'visible';
+    document.body.style.overflow = 'overlay';
 }
 
 document.onkeydown = function (evt) {
