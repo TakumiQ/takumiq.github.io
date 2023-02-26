@@ -71,10 +71,81 @@ a {
     text-decoration: none;
 }
 
+.animatedSecret {
+    position: fixed;
+    font-weight: bold;
+    z-index: 10;
+    border-radius: 10px;
+    display: table;
+    bottom: -50px;
+    right: 30px;
+    outline: solid 3px cyan;
+    outline-offset: 2px;
+    animation: animatedSecretAppears 4s cubic-bezier(.5, -1, .5, 2) 0s, rainbow 1s linear 0s infinite;
+}
+
+.animatedSecretContent {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+@keyframes animatedSecretAppears {
+    from {
+        bottom: -50px;
+    }
+
+    20% {
+        bottom: 14px;
+    }
+
+    80% {
+        bottom: 14px;
+    }
+
+    100% {
+        bottom: -50px;
+        display: none;
+    }
+}
+
+@keyframes rainbow {
+    from {
+        outline-color: red;
+        color: red;
+    }
+
+    20% {
+        outline-color: orange;
+        color: orange;
+    }
+
+    40% {
+        outline-color: yellow;
+        color: yellow;
+    }
+
+    60% {
+        outline-color: green;
+        color: green;
+    }
+
+    80% {
+        outline-color: blue;
+        color: blue;
+    }
+
+    100% {
+        outline-color: purple;
+        color: purple;
+    }
+}
+
 /* ------- Scrollbar ------- */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 16px;
 }
 
 ::-webkit-scrollbar-track {
@@ -82,13 +153,13 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,120,120,0.9);
-    background: rgb(0 255 255 / 0.3);
-    border-radius: 5px;
+    background: rgb(0 255 255 / 0.5);
+    border-radius: 10px;
+    border: 4px solid black;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: rgb(0 255 255 / 0.3);
 }
 
 /* ------- General ------- */
@@ -235,6 +306,7 @@ a {
     -ms-flex: 50%;
     flex: 50%;
     padding: 0 4px;
+    height: auto;
 }
 
 /* Modal background */
