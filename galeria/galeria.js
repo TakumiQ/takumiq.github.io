@@ -21,7 +21,7 @@ var img = [
 var secretGallery = [
     ["Sonic US.png", 1],
     ["Canelita.gif", 2],
-    ["Generator room Cortex.gif", 3]
+    ["Generator Room Cortex.gif", 3]
 ];
 
 GenerateGallery(img);
