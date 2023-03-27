@@ -1,30 +1,35 @@
-var audio = document.getElementById("galleryAudio");
-var secretAudio = document.getElementById("secretGalleryAudio");
-audio.volume = 0.2;
-secretAudio.volume = 0.4;
-
+AdjustAudioVolume();
 FixImages();
 
-var img = [
-    ["Pommy HD.png", 1],
-    ["Spooky Icon.png", 2],
-    ["CJ meets Art Renderer.png", 3],
-    ["Mario Vs Clippy Remastered.png", 1],
-    ["CAT-DOS Logo.png", 2],
-    ["Cyan origins.png", 3],
-    ["Throw test 1.png", 1],
-    ["Storm King Logo in Prime 4 style.png", 2],
-    ["Subspace.png", 3],
-    ["Throw test 2.png", 2]
-];
+var JSONStandardGallery;
+var JSONSecretGallery;
 
-var secretGallery = [
-    ["Sonic US.png", 1],
-    ["Canelita.gif", 2],
-    ["Generator Room Cortex.gif", 3]
-];
+DeserializeStandardGallery();
 
-GenerateGallery(img);
+async function DeserializeStandardGallery() {
+    JSONStandardGallery = await fetchDataFromJSON('/galeria/StandardGallery.json');
+    GenerateGallery(JSONStandardGallery);
+}
+
+async function DeserializeSecretGallery() {
+    JSONSecretGallery = await fetchDataFromJSON('/galeria/SecretGallery.json');
+    GenerateGallery(JSONSecretGallery);
+}
+
+async function fetchDataFromJSON(JSONRoute) {
+    let response = await fetch(JSONRoute);
+    let data = await response.json();
+    data = JSON.stringify(data);
+    data = JSON.parse(data);
+    return data;
+}
+
+function AdjustAudioVolume() {
+    var audio = document.getElementById("galleryAudio");
+    var secretAudio = document.getElementById("secretGalleryAudio");
+    audio.volume = 0.2;
+    secretAudio.volume = 0.4;
+}
 
 function FixImages() {
     var elements = document.getElementsByClassName("gal-imgs-col");
@@ -43,7 +48,7 @@ function OpenModal(pImage) {
     var modalImg = document.getElementById("imgModal");
     var captionText = document.getElementById("gal-caption");
     
-    modalImg.src = img.src;
+    modalImg.src = img.og;
     captionText.innerHTML = pImage.alt;
 
     document.body.style.overflow = 'hidden';
@@ -75,38 +80,42 @@ function ShowSecretGallery() {
     if (secretGalleryOnScreen == false) {
         var secret = document.getElementById("secretGallery");
         secret.style.display = "block";
-        GenerateGallery(secretGallery);
+        DeserializeSecretGallery();
 
         SecretDiscovered();
     }
     secretGalleryOnScreen = true;
 }
 
-function GenerateGallery(pArray) {
+function GenerateGallery(JSONGallery) {
 
-    var currentGallery = pArray;
+    var currentGallery = JSONGallery;
     var currentDirectory;
     var currentCol;
+    var thumbnailRoute = "thumbnails/"
 
-    if (currentGallery === img) {
+    if (currentGallery === JSONStandardGallery) {
         currentDirectory = "/galeria/img/";
         currentCol = "galCol";
     }
 
-    if (currentGallery === secretGallery) {
+    if (currentGallery === JSONSecretGallery) {
         currentDirectory = "/galeria/secretGallery/";
         currentCol = "secGalCol";
     }
 
+    console.log(currentGallery);
+
     for (var i = 0; i < currentGallery.length; i++) {
         const img = document.createElement("img");
-        img.src = currentDirectory + currentGallery[i][0];
+        img.src = currentDirectory + thumbnailRoute + currentGallery[i].ImageName;
         img.className = "gal-img";
-        img.alt = currentGallery[i][0].substring(0, currentGallery[i][0].length - 4);
+        img.alt = currentGallery[i].ImageDescription;
+        img.og = currentDirectory + currentGallery[i].ImageName;
         img.onclick = function () { OpenModal(img); }
         img.loading = "lazy";
 
-        src = document.getElementById(currentCol + currentGallery[i][1]);
+        src = document.getElementById(currentCol + currentGallery[i].ImageColumn);
         src.appendChild(img);
     }
 }
