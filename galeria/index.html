@@ -2,80 +2,93 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="icon" href="/recursos/img/favicon.png" />
-    <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="/recursos/css/styles.css" media="all">
-    <title>Galeria | Takumi Q Domain</title>
+  <link rel="icon" href="/recursos/img/favicon.png" />
+  <meta charset="utf-8">
+  <link href="/recursos/css/bootstrap.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/recursos/css/styles.css" media="all">
+  <title>Galeria | Takumi Q Domain</title>
 </head>
 
 <body>
-    <!-- Título -->
-    <div id="logo"></div>
-    <div id="subtitle">Sitio para propósitos personales</div>
+  <!-- Título -->
+  <div id="logo"></div>
 
-    <!-- Botonera -->
-    <div class="gen-btns">
-        <a href="/" class="gen-btn gen-btn-w17">Inicio</a>
-        <a href="/info" class="gen-btn gen-btn-w16">Acerca de</a>
-        <a href="/links" class="gen-btn gen-btn-w17">Links</a>
-        <a href="https://takumiq.blogspot.com" class="gen-btn gen-btn-w17">Blog</a>
-        <a href="/galeria" class="gen-btn gen-btn-w16">Galería</a>
-        <a href="/juegos" class="gen-btn gen-btn-w17">Juegos</a>
+  <!-- Botonera -->
+  <div class="row gen-btns container">
+    <div class="btn-group" role="group">
+      <a href="/" class="btn btn-outline-primary text-light fw-bold">Inicio</a>
+      <a href="/info" class="btn btn-outline-primary btn-red text-light fw-bold">Acerca de</a>
+      <a href="/links" class="btn btn-outline-primary text-light fw-bold">Links</a>
+      <a href="https://takumiq.blogspot.com" class="btn btn-outline-primary text-light fw-bold">Blog</a>
+      <a href="/galeria" class="btn btn-outline-primary text-light fw-bold">Galería</a>
+      <a href="/juegos" class="btn btn-outline-primary text-light fw-bold">Juegos</a>
+      <a href="/software" class="btn btn-outline-primary text-light fw-bold">Software</a>
+    </div>
+  </div>
+
+  <!-- Contenido -->
+  <div class="gen-container gen-mb20">
+    <h1 align="center">Gale<b onclick="ShowSecretGallery()">r</b>ía</h1>
+    <div align="center">
+      <audio controls id="galleryAudio" class="gen-mb20">
+        <source
+          src="https://vgmsite.com/soundtracks/super-smash-bros.-ultimate-expanded-vol.-01-super-smash-bros.-switch-gamerip-2018/avgjkwtbow/1-88.%20Trophy%20Gallery.mp3"
+          type="audio/mpeg">Your browser does not support the audio element.
+      </audio>
     </div>
 
-    <!-- Contenido -->
-    <div class="gen-container gen-mb20">
-        <h1 align="center">Gale<b onclick="ShowSecretGallery()">r</b>ía</h1>
-        <div align="center">
-            <audio controls id="galleryAudio" class="gen-mb20"><source src="https://vgmsite.com/soundtracks/super-smash-bros.-ultimate-expanded-vol.-01-super-smash-bros.-switch-gamerip-2018/avgjkwtbow/1-88.%20Trophy%20Gallery.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
-        </div>
+    <!-- Galería -->
+    <div class="gal-imgs-row gen-mb20">
+      <div id="galCol1" class="gal-imgs-col"></div>
+      <div id="galCol2" class="gal-imgs-col"></div>
+      <div id="galCol3" class="gal-imgs-col"></div>
+    </div>
+  </div>
 
-        <!-- Galería -->
-        <div class="gal-imgs-row gen-mb20">
-            <div id="galCol1" class="gal-imgs-col"></div>
-            <div id="galCol2" class="gal-imgs-col"></div>
-            <div id="galCol3" class="gal-imgs-col"></div>
-        </div>
+  <!-- Secret gallery -->
+  <div id="secretGallery" class="gen-container gen-mb40" style="display: none;">
+    <h1 align="center">Secret gallery</h1>
+    <div align="center">
+      <audio controls id="secretGalleryAudio" class="gen-mb20">
+        <source
+          src="https://delta.vgmsite.com/soundtracks/saturn-bomberman-1996-saturn-gamerip/udvriwcpei/03.%20Amusement%20World.mp3"
+          type="audio/mpeg">Your browser does not support the audio element.
+      </audio>
     </div>
 
     <!-- Secret gallery -->
-    <div id="secretGallery" class="gen-container gen-mb40" style="display: none;">
-        <h1 align="center">Secret gallery</h1>
-        <div align="center">
-            <audio controls id="secretGalleryAudio" class="gen-mb20"><source src="https://delta.vgmsite.com/soundtracks/saturn-bomberman-1996-saturn-gamerip/udvriwcpei/03.%20Amusement%20World.mp3" type="audio/mpeg">Your browser does not support the audio element.</audio>
-        </div>
+    <div class="gal-imgs-row gen-mb20">
+      <div id="secGalCol1" class="gal-imgs-col"></div>
+      <div id="secGalCol2" class="gal-imgs-col"></div>
+      <div id="secGalCol3" class="gal-imgs-col"></div>
+    </div>
+  </div>
 
-        <!-- Secret gallery -->
-        <div class="gal-imgs-row gen-mb20">
-            <div id="secGalCol1" class="gal-imgs-col"></div>
-            <div id="secGalCol2" class="gal-imgs-col"></div>
-            <div id="secGalCol3" class="gal-imgs-col"></div>
-        </div>
+  <!-- Modal -->
+  <div id="galleryModal" class="gal-modal">
+    <!-- X -->
+    <span class="gal-modal-close" onclick="CloseModal()">&times;</span>
+
+    <!-- Imagen -->
+    <div class="gal-imgbox">
+      <img class="gal-modal-content" id="imgModal" />
     </div>
 
-    <!-- Modal -->
-    <div id="galleryModal" class="gal-modal">
-        <!-- X -->
-        <span class="gal-modal-close" onclick="CloseModal()">&times;</span>
+    <!-- Descripción -->
+    <div id="gal-caption"></div>
+  </div>
 
-        <!-- Imagen -->
-        <div class="gal-imgbox">
-            <img class="gal-modal-content" id="imgModal" />
-        </div>
+  <!-- Scripts -->
+  <script src="/scripts/global.js"></script>
+  <script src="/scripts/galeria.js"></script>
 
-        <!-- Descripción -->
-        <div id="gal-caption"></div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="/scripts/global.js"></script>
-    <script src="/scripts/galeria.js"></script>
-
-    <footer>
-        <p>
-            Takumi Q Domain                         Contacto: <a href="mailto:takumi12338@gmail.com">takumi12338@gmail.com</a>
-        </p>
-    </footer>
+  <footer>
+    <p>
+      Takumi Q Domain                         Contacto: <a href="mailto:takumi12338@gmail.com">takumi12338@gmail.com</a>
+    </p>
+  </footer>
 </body>
+
 </html>

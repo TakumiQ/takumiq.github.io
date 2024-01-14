@@ -2,82 +2,92 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <link rel="icon" href="/recursos/img/favicon.png" />
-    <meta charset="utf-8">
-    <link type="text/css" rel="stylesheet" href="/recursos/css/styles.css" media="all">
-    <title>Juegos | Takumi Q Domain</title>
+  <link rel="icon" href="/recursos/img/favicon.png" />
+  <meta charset="utf-8">
+  <link href="/recursos/css/bootstrap.css" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="/recursos/css/styles.css" media="all">
+  <title>Juegos | Takumi Q Domain</title>
 </head>
 
 <body>
-    <!-- Título -->
-    <div id="logo"></div>
-    <div id="subtitle">Sitio para propósitos personales</div>
+  <!-- Título -->
+  <div id="logo"></div>
 
-    <!-- Botonera -->
-    <div class="gen-btns">
-        <a href="/" class="gen-btn gen-btn-w17">Inicio</a>
-        <a href="/info" class="gen-btn gen-btn-w16">Acerca de</a>
-        <a href="/links" class="gen-btn gen-btn-w17">Links</a>
-        <a href="https://takumiq.blogspot.com" class="gen-btn gen-btn-w17">Blog</a>
-        <a href="/galeria" class="gen-btn gen-btn-w16">Galería</a>
-        <a href="/juegos" class="gen-btn gen-btn-w17">Juegos</a>
+  <!-- Botonera -->
+  <div class="row gen-btns container">
+    <div class="btn-group" role="group">
+      <a href="/" class="btn btn-outline-primary text-light fw-bold">Inicio</a>
+      <a href="/info" class="btn btn-outline-primary btn-red text-light fw-bold">Acerca de</a>
+      <a href="/links" class="btn btn-outline-primary text-light fw-bold">Links</a>
+      <a href="https://takumiq.blogspot.com" class="btn btn-outline-primary text-light fw-bold">Blog</a>
+      <a href="/galeria" class="btn btn-outline-primary text-light fw-bold">Galería</a>
+      <a href="/juegos" class="btn btn-outline-primary text-light fw-bold">Juegos</a>
+      <a href="/software" class="btn btn-outline-primary text-light fw-bold">Software</a>
     </div>
+  </div>
 
-    <!-- Contenido -->
-    <div class="gen-container gen-mb40">
-        <h1 align="center">Juegos</h1>
-        <div align="center">
-            <table>
-                <tr>
-                    <td align="center">
-                        <a href="PPWEx">
-                            <img src="img/banners/BannerPPWEx.png" />
-                            <div class="gameTitle">Pony Poky World Ex.</div>
-                        </a>
-                        <div class="gameDesc">Adéntrate en tierras de fantasía. Corre, salta y explora tus alrededores mientras tratas de descubrir la verdad tras el origen del todo.</div>
-                    </td>
-                    <td align="center">
-                        <a href="MeteorStrike">
-                            <img src="img/banners/BannerMeteorStrike.png" />
-                            <div class="gameTitle">Meteor Strike</div>
-                        </a>
-                        <div class="gameDesc">Una criatura proveniente de otro universo ha condenado al planeta tierra. Es tu deber detenerlo a toda costa.</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <a href="StealthMaster">
-                            <img src="img/banners/BannerStealthMaster.png" />
-                            <div class="gameTitle">Stealth Master</div>
-                        </a>
-                        <div class="gameDesc">Has despertado en un complejo bajo tierra. Encuentra una salida, evitando a su vez a los enemigos que asechan el lugar.</div>
-                    </td>
-                    <td align="center">
-                        <a href="MazeMaster">
-                            <img src="img/banners/BannerMazeMaster.png" />
-                            <div class="gameTitle">Maze Master</div>
-                        </a>
-                        <div class="gameDesc">Ya en el exterior, queda un reto más por superar. Atraviesa los distintos laberintos mientras escapas del enemigo que los custodia.</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center">
-                        <a href="BeamMaster">
-                            <img src="img/banners/BannerBeamMaster.png" />
-                            <div class="gameTitle">Beam Master</div>
-                        </a>
-                        <div class="gameDesc">Te encuentras en un planeta desolado. Dispara a los enemigos y trata de sobrevivir durante 8 oleadas repletas de amenazas.</div>
-                    </td>
-                    <td align="center">
-                        <a href="ExplorerMaster">
-                            <img src="img/banners/BannerExplorerMaster.png" />
-                            <div class="gameTitle">Explorer Master</div>
-                        </a>
-                        <div class="gameDesc">Estas atrapado en un lugar tétrico. Recoge objetos esparcidos por el escenario y ábrete paso a través de las instalaciones.</div>
-                    </td>
-                </tr>
-                <!--<tr>
+  <!-- Contenido -->
+  <div class="gen-container gen-mb40">
+    <h1 align="center">Juegos</h1>
+    <div align="center">
+      <table>
+        <tr>
+          <td align="center">
+            <a href="PPWEx">
+              <img src="img/banners/BannerPPWEx.png" />
+              <div class="gameTitle">Pony Poky World Ex.</div>
+            </a>
+            <div class="gameDesc">Adéntrate en tierras de fantasía. Corre, salta y explora tus alrededores mientras
+              tratas de descubrir la verdad tras el origen del todo.</div>
+          </td>
+          <td align="center">
+            <a href="MeteorStrike">
+              <img src="img/banners/BannerMeteorStrike.png" />
+              <div class="gameTitle">Meteor Strike</div>
+            </a>
+            <div class="gameDesc">Una criatura proveniente de otro universo ha condenado al planeta tierra. Es tu deber
+              detenerlo a toda costa.</div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <a href="StealthMaster">
+              <img src="img/banners/BannerStealthMaster.png" />
+              <div class="gameTitle">Stealth Master</div>
+            </a>
+            <div class="gameDesc">Has despertado en un complejo bajo tierra. Encuentra una salida, evitando a su vez a
+              los enemigos que asechan el lugar.</div>
+          </td>
+          <td align="center">
+            <a href="MazeMaster">
+              <img src="img/banners/BannerMazeMaster.png" />
+              <div class="gameTitle">Maze Master</div>
+            </a>
+            <div class="gameDesc">Ya en el exterior, queda un reto más por superar. Atraviesa los distintos laberintos
+              mientras escapas del enemigo que los custodia.</div>
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            <a href="BeamMaster">
+              <img src="img/banners/BannerBeamMaster.png" />
+              <div class="gameTitle">Beam Master</div>
+            </a>
+            <div class="gameDesc">Te encuentras en un planeta desolado. Dispara a los enemigos y trata de sobrevivir
+              durante 8 oleadas repletas de amenazas.</div>
+          </td>
+          <td align="center">
+            <a href="ExplorerMaster">
+              <img src="img/banners/BannerExplorerMaster.png" />
+              <div class="gameTitle">Explorer Master</div>
+            </a>
+            <div class="gameDesc">Estas atrapado en un lugar tétrico. Recoge objetos esparcidos por el escenario y
+              ábrete paso a través de las instalaciones.</div>
+          </td>
+        </tr>
+        <!--<tr>
                     <td align="center">
                         <a>
                             <img src="img/banners/Banner.png" />
@@ -86,15 +96,16 @@
                         <div class="gameDesc">Aun no se ha desbloqueado este elemento. Vuelve mas tarde para más información.</div>
                     </td>
                 </tr>-->
-            </table>
+      </table>
 
-        </div>
     </div>
+  </div>
 
-    <footer>
-        <p>
-            Takumi Q Domain                         Contacto: <a href="mailto:takumi12338@gmail.com">takumi12338@gmail.com</a>
-        </p>
-    </footer>
+  <footer>
+    <p>
+      Takumi Q Domain                         Contacto: <a href="mailto:takumi12338@gmail.com">takumi12338@gmail.com</a>
+    </p>
+  </footer>
 </body>
+
 </html>

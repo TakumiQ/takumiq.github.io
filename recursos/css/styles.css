@@ -106,7 +106,6 @@ a {
 
     100% {
         bottom: -50px;
-        display: none;
     }
 }
 
@@ -207,7 +206,6 @@ a {
     margin: auto;
     margin-bottom: 30px;
     width: 720px;
-    height: 40px;
 }
 
 .gen-btn {
@@ -286,8 +284,8 @@ a {
 
 .links-btn {
     box-sizing: border-box;
-    background-color: #0088e2;
-    border: 3px solid #0044ff;
+    background-color: #00ffff40;
+    border: 3px solid #00ffff90;
     height: 60px;
     line-height: 54px;
     color: white;
