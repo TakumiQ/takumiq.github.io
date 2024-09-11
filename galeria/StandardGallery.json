@@ -83,5 +83,15 @@
         "ImageName": "Sylux Entrance.png",
         "ImageDescription": "Sylux Entrance",
         "ImageColumn": 3
+    },
+    {
+        "ImageName": "SB5 cover.png",
+        "ImageDescription": "Super Bomberman 5 cover",
+        "ImageColumn": 1
+    },
+    {
+        "ImageName": "ZDR.png",
+        "ImageDescription": "ZDR",
+        "ImageColumn": 2
     }
 ]
