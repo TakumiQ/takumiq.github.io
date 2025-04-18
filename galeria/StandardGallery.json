@@ -93,5 +93,10 @@
         "ImageName": "ZDR.png",
         "ImageDescription": "ZDR",
         "ImageColumn": 2
+    },
+    {
+        "ImageName": "Shadow Labyrinth.png",
+        "ImageDescription": "Shadow Labyrinth",
+        "ImageColumn": 3
     }
 ]

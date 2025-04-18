@@ -296,6 +296,32 @@ a {
     text-align: center;
 }
 
+.links-btn-unknown {
+    box-sizing: border-box;
+    background: linear-gradient(270deg, #00ffff, #ff00ff, #00ffff, #ff00ff);
+    background-size: 300% 100%;
+    background-repeat: repeat;
+    border: 3px solid #00ffff90;
+    height: 60px;
+    line-height: 54px;
+    color: white;
+    cursor: pointer;
+    float: left;
+    border-radius: 16px;
+    text-decoration: none;
+    text-align: center;
+    animation: gradientLoop 6s linear infinite;
+}
+
+@keyframes gradientLoop  {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
 .links-btn:hover {
     background-color: #0068ad;
 }

@@ -1,0 +1,204 @@
+<!--takumiq.github.io/experimental/unknown/-->
+
+<html>
+
+<head>
+  <link rel="icon" href="resources/favicon.png" />
+  <meta charset="utf-8">
+  <link href="/recursos/css/bootstrap.css" rel="stylesheet">
+  <title>The Unknown</title>
+  <style>
+    @font-face {
+      font-family: Tahoma;
+      src: url('resources/tahoma.ttf');
+    }
+
+    html,
+    body {
+      overflow: hidden;
+    }
+
+    body {
+      background-image: url('resources/bg.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      image-rendering: pixelated;
+    }
+
+    p {
+      margin: 0 0 2px 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .taskbar-startbutton {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: auto;
+      height: auto;
+    }
+
+    .taskbar-taskbar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      image-rendering: pixelated;
+    }
+
+    .taskbar-iconbar {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: auto;
+      height: auto;
+    }
+
+    .taskbar-cyan {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      height: auto;
+    }
+
+    .window {
+      position: absolute;
+      width: 410px;
+      height: 425px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('resources/window.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border: none;
+      overflow: hidden;
+      align-items: center;
+      z-index: 99999;
+    }
+
+    .dragbar {
+      height: 30px;
+      width: 100%;
+      cursor: move;
+      background: rgba(0, 0, 0, 0);
+      user-select: none;
+    }
+
+    .window-content {
+      padding: 88px 10px 10px 6px;
+      color: rgb(0, 0, 0);
+      font-family: 'Tahoma', sans-serif;
+      font-size: 12px;
+    }
+
+    .webicon {
+      vertical-align: middle;
+      margin-right: 4px;
+    }
+
+    #system-hour {
+      position: fixed;
+      bottom: 8px;
+      right: 12px;
+      font-family: 'Tahoma', sans-serif;
+      font-size: 12px;
+      color: white;
+      padding: 0px 1px;
+      border-radius: 4px;
+      z-index: 9999;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="window" id="id-window">
+    <div class="dragbar" id="id-dragbar"></div>
+    <div class="window-content">
+      <p>
+        <a href="https://archive.org/download/minesweeperxp/minesweeper.zip">
+          <img src="resources/zip.png" class="webicon">Minesweeper.zip
+        </a>
+      </p>
+      <p>
+        <a href="https://www.screensaversplanet.com/files/screensavers/ssmaze.zip">
+          <img src="resources/zip.png" class="webicon">3D Maze screensaver.zip
+        </a>
+      </p>
+      <p>
+        <a href="resources/pyompyomspeedrun.mp4">
+          <img src="resources/mp3.png" class="webicon">Pyom Pyom speedrun.mp4
+        </a>
+      </p>
+      <p>
+        <a href="https://video.wixstatic.com/video/452ab5_c69e3f130f7d4b2eadf9774d4d77b3d1/1080p/mp4/file.mp4">
+          <img src="resources/mp3.png" class="webicon">Sportacus Vs Homelander.mp4
+        </a>
+      </p>
+      <p>
+        <a href="https://static.wixstatic.com/mp3/452ab5_b5b4289844c9495dae3e611a34133770.mp3">
+          <img src="resources/mp3.png" class="webicon">Theme of Flares Flaremous.mp3
+        </a>
+      </p>
+      <p>
+        <a href="/galeria/resources/meowsker.jpg">
+          <img src="resources/jpg.png" class="webicon">Meowsker reveal.jpg
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <img src="resources/taskbar.png" class="taskbar-taskbar">
+  <img src="resources/startbutton.png" class="taskbar-startbutton">
+  <img src="resources/iconbar.png" class="taskbar-iconbar">
+  <img src="resources/cyansleeps.gif" class="taskbar-cyan">
+  <div id="system-hour"></div>
+
+  <script>
+    const windowd = document.getElementById("id-window");
+    const dragbar = document.getElementById("id-dragbar");
+
+    let offsetX = 0, offsetY = 0, isDragging = false;
+
+    dragbar.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      offsetX = e.clientX - windowd.offsetLeft;
+      offsetY = e.clientY - windowd.offsetTop;
+      document.body.style.userSelect = 'none';
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        windowd.style.left = (e.clientX - offsetX) + "px";
+        windowd.style.top = (e.clientY - offsetY) + "px";
+      }
+    });
+
+    document.addEventListener("mouseup", () => {
+      isDragging = false;
+      document.body.style.userSelect = 'auto';
+    });
+
+    function updateHour() {
+      const watch = document.getElementById('system-hour');
+      const dateNow = new Date();
+      const hours = dateNow.getHours().toString().padStart(2, '0');
+      const minutes = dateNow.getMinutes().toString().padStart(2, '0');
+      const seconds = dateNow.getSeconds().toString().padStart(2, '0');
+      watch.textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    setInterval(updateHour, 1000);
+    updateHour();
+  </script>
+
+</body>
+
+</html>
